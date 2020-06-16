@@ -211,8 +211,8 @@ fun deterministicTournamentSelection(
         k: Int = 10
     ): IntArray {
 
-    val tournamentCanidates = mutableListOf(population).shuffled(random).take(k)[0]
-    return tournamentCanidates.maxBy { scoreFitness(it, distanceMatrix, worstPossibleScore) }!!
+    val tournamentCandidates = population.toList().shuffled(random).take(k)
+    return tournamentCandidates.maxBy { scoreFitness(it, distanceMatrix, worstPossibleScore) }!!
 }
 
 ```
