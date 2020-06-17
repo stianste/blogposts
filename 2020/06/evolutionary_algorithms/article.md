@@ -405,7 +405,7 @@ Deretter kan vi gjenta denne funksjonen for å generere en tilfeldig, initiell p
 
 ### Sy Det Hele Sammen
 
-Nå skal vi ha alle funksjonene vi trenger til å sy det hele sammen til en fungerende algoritmen:
+Nå skal vi ha alle funksjonene vi trenger til å sy det hele sammen til en fungerende algoritme:
 
 ```kotlin
     val startTime = System.currentTimeMillis()
@@ -481,7 +481,7 @@ Nå skal vi ha alle funksjonene vi trenger til å sy det hele sammen til en fung
 }
 ```
 
-Om man kiker nærmere på koden ser man at mye av den egentlig bare er hyperparametere, printing av info og å holde styr på fitness underveis.
+Om man kikker nærmere på koden ser man at mye av den egentlig bare er hyperparametere, printing av info og å holde styr på fitness underveis.
 Jeg har også valgt å ta ut noe av koden som oppdaterer variabler når en ny beste løsning er funnet.
 
 For p01 problemet produserer koden noe output som:
