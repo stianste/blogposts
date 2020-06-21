@@ -1,13 +1,5 @@
 # «Survival of the Fittest» – En Intuitiv Introduksjon Til Evolusjonære Algoritmer
 
-## Notater
-
-- Skriver i førsteperson og refererer til leseren som "deg/du"
-
-## TODOS
-
--
-
 ## Introduksjon
 
 Det kan ofte virke som maskinlæring og "AI" krever en master i lineær algebra,
@@ -25,7 +17,7 @@ approksimere Traveling Salesperson Problem (TSP).
 **Disclaimer**: _Jeg har aldri skrevet Kotlin før, så det blir nok ikke den ryddigste koden du har sett._
 I tillegg er det et par variabler rundt omkring i koden som er definert utenfor scopet som er vist, men
 som ikke defineres eksplisitt i artikkelen for å gjøre ting litt ryddigere.
-F.eks. `random` fra Kotlin, konstanter som `POPULATION_SIZE`, støttefunksjoner for å skrive ut løsninger og lignende.
+For eksempel `random` fra Kotlin, konstanter som `POPULATION_SIZE`, støttefunksjoner for å skrive ut løsninger og lignende.
 
 Den endelige koden kan du finne [her](https://github.com/stianste/evolutionary-TSP).
 
@@ -49,7 +41,7 @@ sier «hei, her har du den korteste ruten for å besøke alle byer i Norge», s�
 kan ikke du engang _verifisere_ at min foreslåtte løsning stemmer (i polynomisk tid alle fall).
 
 Om dette ikke gir 100% mening trenger du ikke uroe deg. Det viktigste vi må vite er at problemet, så vidt
-vi vet i dag i alle fall, ikke lar seg løse direkte. Vi må derfor ta til takke med å _approksimere_ en løsning.
+vi vet i dag i alle fall, ikke lar seg løse direkte på fornuftig tid. Vi må derfor ta til takke med å _approksimere_ en løsning.
 
 I denne artikkelen kommer vi derfor til å ta for oss noen mindre eksempler av TSP som vi allerede vet løsningen på, slik at vi kan
 verifisere at approksimeringen vår er ok.
@@ -276,7 +268,7 @@ tall gjentar seg).
 Artikkelen foreslår en ny metode for å oppnå samme resultat, men jeg valgte å gjøre
 det enkelt å prøve ut Order Crossover Operator først.
 
-Jeg har i tillegg forsøkt å illustrere prosessen her:
+Jeg har i tillegg forsøkt å illustrere prosessen her, hvor `P1` er den første foreldren, og `P2` den andre:
 
 ![Order Crossover Operator Illustration](./images/order_crossover_illustration.png)
 
@@ -309,7 +301,7 @@ fun orderCrossover(parent1: IntArray, parent2: IntArray, windowSize: Int = 3): I
 ```
 
 Her kunne og burde man også laget det andre avkommet i samme slengen, men jeg valgte heller å gjøre det enkelt og bare generere
-ett barn, så heller kjøre funksjonen igjen med nye foreldre. Enda en detalj med rom for forbedring.
+ett barn, så heller kjøre funksjonen igjen med nye foreldre. Nok en detalj med rom for forbedring.
 
 ### Mutasjon
 
@@ -532,8 +524,10 @@ at det finnes `4e+26` potensielle løsninger.
 
 ### Avslutning og Framtidig Arbeid
 
-Du har nå fått en rask innføring i de generelle byggeblokkene i en evolusjonær algoritme og, stegene den består av.
+Du har nå fått en innføring i de generelle byggeblokkene i en evolusjonær algoritme og, stegene den består av.
 Her er det fortsatt masse rom for forbedring og leking! Det finnes for eksempel egne teknikker som «Islands» hvor man
 har flere forskjellige populasjoner. Det er egentlig bare fantasien og evolusjon som setter grenser for hva man kan få til.
 Her er det fritt fram for å fortsette optimalisering, leke seg med andre hyperparametere, andre fitnessfunksjoner
 og masse annet snacks om man ønsker.
+
+Så neste gang du har et problem du ønsker å approksimere, vurderer om en evolusjonær algoritme kan være løsningen.
